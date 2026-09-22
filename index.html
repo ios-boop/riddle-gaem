@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Screen Image</title>
+  <style>
+    /* 1. Reset all margins and paddings */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* 2. Prevent any scrolling and remove scrollbars */
+    html, body {
+      width: 100%;
+      height: 100%;
+      height: 100dvh; /* Handles dynamic address bars on mobile phones */
+      overflow: hidden;
+      background-color: #000; /* Optional: black background behind image */
+    }
+
+    /* 3. Make image cover the entire screen */
+    .fullscreen-image {
+      width: 100vw;
+      height: 100vh;
+      height: 100dvh;
+      object-fit: cover;       /* Fills entire screen with NO distortion */
+      object-position: center; /* Keeps the center of the image visible */
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <img class="fullscreen-image" src="/img/static.jpg" alt="Fullscreen Image">
+
+</body>
+</html>
